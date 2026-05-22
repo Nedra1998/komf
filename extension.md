@@ -2,6 +2,13 @@
 
 ## The extension lives in the `Komelia` submodule. Run all commands from the `Komelia` directory.
 
+
+## Direct Download the extension and skip the building step
+```bash
+https://drive.google.com/file/d/18PW2WRaL_l13GlMkqwWqjWCtuRbpfq98/view?usp=sharing
+```
+
+
 ```bash
 cd Komelia
 ```
