@@ -2,6 +2,11 @@
 
 ## The extension lives in the `Komelia` submodule. Run all commands from the `Komelia` directory.
 
+## Dont forget to change the image in the docker compose until the main developer build the new update
+```bash
+loloky/komf:latest
+```
+
 
 ## Direct Download the extension and skip the building step
 ```bash
