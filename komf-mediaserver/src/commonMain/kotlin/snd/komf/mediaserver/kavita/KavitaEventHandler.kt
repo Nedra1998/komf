@@ -181,5 +181,7 @@ class KavitaEventHandler(
         hubConnection.on("UserUpdate", { }, Object::class.java)
         hubConnection.on("UserProgressUpdate", { }, Object::class.java)
         hubConnection.on("WordCountAnalyzerProgress", { }, Object::class.java)
+        hubConnection.on("ReadingSessionUpdate", { }, Object::class.java)
+        hubConnection.on("ReadingSessionClose", { }, Object::class.java)
     }
 }
