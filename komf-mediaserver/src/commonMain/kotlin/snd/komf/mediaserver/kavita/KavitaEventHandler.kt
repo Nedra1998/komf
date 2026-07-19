@@ -20,6 +20,7 @@ import snd.komf.mediaserver.BookEvent
 import snd.komf.mediaserver.MediaServerEventListener
 import snd.komf.mediaserver.SeriesEvent
 import snd.komf.mediaserver.kavita.model.KavitaVolumeId
+import snd.komf.mediaserver.kavita.model.events.ChapterUpdatedEvent
 import snd.komf.mediaserver.kavita.model.events.CoverUpdateEvent
 import snd.komf.mediaserver.kavita.model.events.NotificationProgressEvent
 import snd.komf.mediaserver.kavita.model.events.SeriesRemovedEvent
@@ -172,6 +173,7 @@ class KavitaEventHandler(
         hubConnection.on("ScanSeries", { }, Object::class.java)
         hubConnection.on("ScanProgress", { }, Object::class.java)
         hubConnection.on("SendingToDevice", { }, Object::class.java)
+        hubConnection.on("ChapterUpdated", { _: ChapterUpdatedEvent -> }, ChapterUpdatedEvent::class.java)
         hubConnection.on("SeriesAdded", { }, Object::class.java)
         hubConnection.on("SeriesAddedToCollection", { }, Object::class.java)
         hubConnection.on("SiteThemeProgress", { }, Object::class.java)
@@ -179,5 +181,7 @@ class KavitaEventHandler(
         hubConnection.on("UserUpdate", { }, Object::class.java)
         hubConnection.on("UserProgressUpdate", { }, Object::class.java)
         hubConnection.on("WordCountAnalyzerProgress", { }, Object::class.java)
+        hubConnection.on("ReadingSessionUpdate", { }, Object::class.java)
+        hubConnection.on("ReadingSessionClose", { }, Object::class.java)
     }
 }
